@@ -18,4 +18,5 @@ printf("it is not a letter!");
 }
 printf("character=%c\n",ch);
 printf("ASCII Value (decimal)=%d\n",ch);
+return 0;
 }
