@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+  char ch;
+printf("enter a character=");
+scanf("%c", &ch);
+if(ch>='A'&&ch<='Z')
+{
+printf("convert to smaller case=%c", ch+32);
+}
+if(ch>='a'&&ch<='z')
+{
+printf("convert to capital case=%c", ch-32);
+}
+else
+{
+printf("it is not a letter!");
+}
+printf("character=%c\n",ch);
+printf("ASCII Value (decimal)=%d\n",ch);
+}
