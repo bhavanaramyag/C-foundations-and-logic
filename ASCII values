@@ -7,3 +7,11 @@ int main()
     printf("character=%c\n",ch);
     printf("ASCII value(decimal)=%d\n",ch);
 }
+
+/*
+  Topic: Character and ASCII Value
+  Output Example:
+  enter a character: A
+  character=A
+  ASCII value(decimal)=65
+*/
