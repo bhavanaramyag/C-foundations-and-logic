@@ -22,3 +22,19 @@ int main()
   }
     return 0;
 }
+
+/*
+  Program: Case Conversion, Vowel/Consonant Check & Character Analysis
+  
+  Sample Input & Output 1 (Uppercase Input):
+  enter a character=M
+  convert to small case=m
+
+  Sample Input & Output 2 (Lowercase Vowel Input):
+  enter a character=e
+  CONSONENT  <-- (Note: see quick logic tip below!)
+
+  Sample Input & Output 3 (Non-letter Input):
+  enter a character=7
+  it is NOT a letter!
+*/
