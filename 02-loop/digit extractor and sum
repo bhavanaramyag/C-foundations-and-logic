@@ -1,1 +1,18 @@
+#include<stdio.h>
+int main()
+{
+int num, sum=0;
+printf("enter an integer= ");
+scanf("%d", &num);
+int temp=num;
+while(temp>0)
+{
+sum += temp%10;
+temp/=10;
+}
+printf("sum of the digit %d is %d\n", num, sum);
+return 0;
+}
 
+/*enter an integer= 123
+sum of digit 123 is 6*/
