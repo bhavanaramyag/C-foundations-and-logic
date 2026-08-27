@@ -1,0 +1,23 @@
+//palindrome number means its the same number even if we read it from left to right or right to left. for example, 121; from right to left its 121 and even from left to right its 121 but 123 is not a palindrome number as from left to right its 123 and right to left its 321.
+#include<stdio.h>
+int main()
+{
+int num, rev=0;
+printf("enter a number=");
+scanf("%d", &num);
+int temp=num;
+while(temp>0)
+{
+rev=rev*10+(temp%10);
+temp/=10;
+}
+if(rev==num)
+{
+printf("the given number is a palindrome number");
+}
+else
+{
+printf("the given number is NOT a palindrome number");
+}
+return 0;
+}
