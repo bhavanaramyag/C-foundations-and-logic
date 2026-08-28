@@ -5,7 +5,7 @@ int main()
     const int correctPin=1649;
     do
     {
-        printf("enter yout 4-digit PIN= ");
+        printf("enter your 4-digit PIN= ");
         scanf("%d",&pin);
         if(pin==correctPin)
         {
