@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+ int choice;
+ printf("enter a number between 1-5= ");
+ scanf("%d" ,&choice);
+ switch(choice)
+ {
+  case 1:
+  printf("Small steps every day lead to big results...");
+  break;
+  case 2:
+  printf("You don't have to be great to start, but you have to start to be great.");
+  break;
+  case 3:
+  printf("Keep your face always toward the sunshine, and shadows will fall behind you.");
+  break;
+  case 4:
+  printf("In the middle of every difficulty lies opportunity.");
+  break;
+  case 5:
+  printf("You are capable of far more than you know.");
+  break;
+} 
+
+if(choice > 5)
+{
+printf("invalid choice!);
+}
+return 0;
+}
