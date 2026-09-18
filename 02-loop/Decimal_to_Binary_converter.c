@@ -1,11 +1,9 @@
 #include<stdio.h>
 int main()
 {
- long long int bin, rem;
- long long int decimal, tempnum;
- long long int base=1;
+ int binary, rem, decimal, tempnum, base=1;
  printf("enter a decimal= ");
- scanf("%lld", &decimal);
+ scanf("%d", &decimal);
  if(decimal==0)
  {
   printf("the binary number is equivalent to 0");
@@ -14,10 +12,11 @@ int main()
  while(tempnum>0)
  {
   rem= tempnum%2;
-  binary += rem*base;
+  binary += rem * base;
   tempnum /= 2;
   base *= 10;
  }
-printf("the binary number of %lld is %lld", decimal, bin);
+printf("the binary number of %d is %d", decimal, binary);
 return 0;
 }
+
