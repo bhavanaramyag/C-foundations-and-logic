@@ -2,15 +2,14 @@
 
 int main() {
     char str[] = "BVRIT";
-    char *p = str; // p points to the first character ('B')
+    char *p = str; 
     int len = 0;
-    
-    // Loop until we hit the null terminator ('\0')
-    while (*p != '\0') {
+    while (*p != '\0')
+    {
         len++;
-        p++; // Move pointer forward to the next character address
+        p++; 
     }
     
-    printf("Length of string: %d", len); // Output: Length of string: 5
+    printf("Length of string: %d", len);
     return 0;
 }
