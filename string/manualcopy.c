@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 void manual_strcpy(char *dest, char *src)
 {
     while (*src != '\0')
