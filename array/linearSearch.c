@@ -1,41 +1,51 @@
 #include<stdio.h>
-void read(int a[], int n);
-void search(int [], int b);
+void read(int a[], int b);
+void display(int a[], int b);
+int linearSearch(int a[], int b, int key);
 int main()
 {
-    int n,b;
+    int b, key;
     printf("enter the size of array = ");
-    scanf("%d", &n);
-    int a[n];
-    read(a,n);
-    search(a,n);
-    
+    scanf("%d", &b);
+    int a[b];
+    read(a,b);
+    display(a,b);
+    printf("enter the element you want to search = ");
+    scanf("%d", &key);
+    int result = linearSearch(a,b,key);
+    if(result == -1)
+    {
+        printf("element not found");
+    }
+    else
+    {
+        printf("element found at %d",result);
+    }
+    return 0;
 }
-void read(int a[], int n)
+void read(int a[], int b)
 {
-    printf("enter the elements of array:\n");
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < b; i++)
     {
         scanf("%d", &a[i]);
     }
 }
-void search(int a[], int n)
+void display(int a[], int b)
 {
-    int b;
-    int found = 0;
-    printf("enter a number you want to find = ");
-    scanf("%d", &b);
-    for(int i = 0; i < n; i++)
+    printf("array:");
+    for(int i = 0; i < b; i++)
     {
-        if(a[i] == b)
+        printf("%d ", a[i]);
+    }
+}
+int linearSearch(int a[], int b, int key)
+{
+    for(int i = 0; i < b; i++)
+    {
+        if(a[i] == key)
         {
-            printf("%d is found at %d", b, i);
-            found=1;
-            break;
+            return i;
         }
     }
-    if(found == 0)
-    {
-        printf("Not found!");
-    }
+        return -1;
 }
