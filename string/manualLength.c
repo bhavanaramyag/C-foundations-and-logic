@@ -1,37 +1,44 @@
-#include <stdio.h>
-void read(char s1[], int n);
-void display(char s1[], int n);
-int length(char *str);
-int main() {
-    int n;
-    printf("Enter the maximum size of the string = ");
-    scanf("%d", &n);
-    char s1[n];
-    read(s1, n);
-    display(s1, n);
-    int len = length(s1);
-    printf("Length of the string = %d\n", len);
+#include<stdio.h>
+int read(char s[], int len);
+void display(char s[]);
+int count(char s[]);
+int main()
+{
+    char s[100];
+    read(s,100);
+    display(s);
+    printf("count of string = %d", count(s));
     return 0;
 }
-
-void read(char s1[], int n) 
+int read(char s[], int len)
 {
-    getchar();
-    printf("Enter the string: ");
-    fgets(s1, n, stdin);
-}
-void display(char s1[], int n) 
-{
-    printf("The string: %s", s1);
-}
-
-int length(char *str) 
-{
-    int len = 0;
-    while (*str != '\0') 
+    int i = 0;
+    char ch;
+    printf("enter the string:");
+    while(i < len - 1 && (ch = getchar()) != '\n' && ch != EOF)
     {
-        len++;
-        str++;            
+        s[i] = ch;
+        i++;
     }
-    return len;
+    s[i] != '\0';
+    return i;
+}
+void display(char s[])
+{
+    int i = 0;
+    printf("string : ");
+    while(s[i] != 0)
+    {
+        putchar(s[i]);
+        i++;
+    }
+    putchar('\n');
+}
+int count(char s[]) {
+    int c = 0;
+    while (s[c] != '\0')
+    {
+        c++;
+    }
+    return c;
 }
