@@ -1,21 +1,46 @@
 #include<stdio.h>
-void manual_strcpy(char *dest, char *src)
-{
-    while (*src != '\0')
-    {
-        *dest = *src;
-        dest++;
-        src++;
-    }
-    *dest = '\0';
-}
+int read(char s[], int len);
+void display(char s[]);
+void copy(char s[], char s1[], int len);
 int main()
 {
-    char source[50];
-    char destination[50];
-    printf("Enter a source string to copy: ");
-    fgets(source, sizeof(source), stdin);
-    manual_strcpy(destination, source);
-    printf("Copied string (destination): %s", destination);
-    return 0;
+    char s[100],s1[100];
+    read(s,100);
+    display(s);
+    copy(s,s1,100);
+}
+int read(char s[], int len)
+{
+    printf("enter string: ");
+    int i = 0;
+    char ch;
+    while(i < len - 1 && (ch = getchar()) != '\n' && ch != EOF)
+    {
+        s[i] = ch;
+        i++;
+    }
+    s[i] = '\0';
+    return i;
+}
+void display(char s[])
+{
+    printf("string: ");
+    int i = 0;
+    while(s[i] != '\0')
+    {
+        putchar(s[i]);
+        i++;
+    }
+    putchar('\n');
+}
+void copy(char s[], char s1[], int len)
+{
+    int i = 0;
+    while(i < len - 1 && s[i] != '\0')
+    {
+        s1[i] = s[i];
+        i++;
+    }
+    s1[i] = '\0';
+    printf("copied string : %s", s1);
 }
